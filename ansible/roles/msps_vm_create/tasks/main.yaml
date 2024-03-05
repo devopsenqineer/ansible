@@ -1,0 +1,30 @@
+- name: Create VM
+
+# Doc: Own create_vm module
+  create_vm: 
+    vlan_id: "{{ MSPS_VM_Create_vlan_id }}"
+    vm_name: "{{ MSPS_VM_Create_vm_name }}"
+    golden_path: "{{ MSPS_VM_Create_golden_path }}"
+    vm_path: "{{ MSPS_VM_Create_vm_path }}"
+    network_port: "{{ MSPS_VM_Create_network_port }}"
+  
+# Doc: Own change hostname module
+
+- name: Change Hostname 
+  change_hostname:
+    vm_name: "{{ MSPS_VM_Create_vm_name }}"
+    user: "{{ MSPS_VM_Create_user }}"
+    p_word: "{{ MSPS_VM_Create_p_word }}"
+
+# Doc: Own change ip configuration module
+
+- name: Change IP-Configuration
+  ip_configuration:
+    vm_name: "{{ MSPS_VM_Create_vm_name }}"
+    ip: "{{ MSPS_VM_Create_ip }}"
+    mask_bits: "{{ MSPS_VM_Create_mask_bits }}"
+    gateway: "{{ MSPS_VM_Create_gateway }}"
+    dns: "{{ MSPS_VM_Create_dns }}"
+    ip_type: "{{ MSPS_VM_Create_ip_type }}"
+    user: "{{ MSPS_VM_Create_user }}"
+    p_word: "{{ MSPS_VM_Create_p_word }}"

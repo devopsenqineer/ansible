@@ -1,0 +1,73 @@
+- name: Main Playbook
+  hosts: WindowsServer
+  gather_facts: no
+
+  vars_files:
+    - vm_dc_vars.yaml
+    - dcvars.yaml 
+    - sitevars.yaml
+    - baseou_vars.yaml
+    - childou_vars.yaml
+
+  roles:
+    - name: MSPS_VM_Create
+      vars: 
+        MSPS_VM_Create_vm_name: WindowsServer_01
+        MSPS_VM_Create_golden_path: C:\\Users\\ 
+        MSPS_VM_Create_vm_path: C:\\Users\\
+        MSPS_VM_Create_network_port: Ethernet0
+        MSPS_VM_Create_user: Administrator
+        MSPS_VM_Create_p_word: 
+        MSPS_VM_Create_ip: 10.10.10.10
+        MSPS_VM_Create_mask_bits: 25
+        MSPS_VM_Create_gateway: 10.10.10.10
+        MSPS_VM_Create_dns: 10.10.10.10
+        MSPS_VM_Create_ip_type: "IPv4"
+
+    - name: MSPS_VM_Create
+      vars: 
+        MSPS_VM_Create_vm_name: WindowsServer_02
+        MSPS_VM_Create_golden_path: C:\\Users\\Administrator\\Desktop
+        MSPS_VM_Create_vm_path:  C:\\Users\\Administrator\\Desktop
+        MSPS_VM_Create_network_port: Ethernet0
+        MSPS_VM_Create_user: Administrator
+        MSPS_VM_Create_p_word: 
+        MSPS_VM_Create_ip: 11.11.11.11
+        MSPS_VM_Create_mask_bits: 25
+        MSPS_VM_Create_gateway: 11.11.11.11
+        MSPS_VM_Create_dns: 11.11.11.11
+        MSPS_VM_Create_ip_type: "IPv4"
+  
+    - name: MSPS_VM_Create
+      vars: 
+        MSPS_VM_Create_vm_name: WindowsServer_03
+        MSPS_VM_Create_golden_path: C:\\Users\\Administrator\\Desktop 
+        MSPS_VM_Create_vm_path: C:\\Users\\Administrator\\Desktop
+        MSPS_VM_Create_network_port: Ethernet0
+        MSPS_VM_Create_user: Administrator
+        MSPS_VM_Create_p_word: 
+        MSPS_VM_Create_ip: 12.12.12.12
+        MSPS_VM_Create_mask_bits: 25
+        MSPS_VM_Create_gateway: 12.12.12.12
+        MSPS_VM_Create_dns: 12.12.12.12
+        MSPS_VM_Create_ip_type: "IPv4"
+
+    - name: MSPS_VM_Create
+      vars: 
+        MSPS_VM_Create_vm_name: WindowsServer_04
+        MSPS_VM_Create_golden_path: C:\\Desktop
+        MSPS_VM_Create_vm_path: C:\\Desktop
+        MSPS_VM_Create_network_port: Ethernet0
+        MSPS_VM_Create_user: Administrator
+        MSPS_VM_Create_p_word: 
+        MSPS_VM_Create_ip: 13.13.13.13
+        MSPS_VM_Create_mask_bits: 25
+        MSPS_VM_Create_gateway: 13.13.13.13
+        MSPS_VM_Create_dns: 13.13.13.13
+        MSPS_VM_Create_ip_type: "IPv4"
+
+    - role: AD_DC_Create
+    - role: AD_OUBase_Create
+    - role: AD_OUChild_Create
+    - role: MSPS_Site_Create            
+    - role: WIN_Folders_Create

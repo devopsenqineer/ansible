@@ -1,0 +1,12 @@
+MSPS_VM_Create_vlan_id: 110
+MSPS_VM_Create_vm_name: "WindowsServer2022"
+MSPS_VM_Create_golden_path: "C:\\Users\\Test\\Desktop\\Server_Image\\"
+MSPS_VM_Create_vm_path: "C:\\Users\\Test\\Desktop\\Server_Image\\Test\\"
+MSPS_VM_Create_network_port: "Ethernet0"
+MSPS_VM_Create_user: "Administrator"
+MSPS_VM_Create_p_word: "Temp1234"
+MSPS_VM_Create_ip: "10.10.10.10"
+MSPS_VM_Create_mask_bits: "24"
+MSPS_VM_Create_gateway: "10.10.10.10"
+MSPS_VM_Create_dns: "8.8.8.8"
+MSPS_VM_Create_ip_type: "IPv4"

@@ -1,0 +1,22 @@
+    - name: Promote server as a read only domain controller
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/microsoft/ad/domain_controller_module.html
+
+      microsoft.ad.domain_controller:
+        dns_domain_name: "{{ AD_DC_Create_dns_domain_name }}"
+        domain_admin_user: "{{ AD_DC_Create_domain_admin_user }}"
+        domain_admin_password: "{{ AD_DC_Create_domain_admin_password }}"
+        safe_mode_password: "{{ AD_DC_Create_safe_mode_password }}"
+        state: "{{ AD_DC_Create_state_dc }}"
+        read_only: "{{ AD_DC_Create_read_only }}"
+        site_name: "{{ AD_DC_Create_site_name_dc }}"
+        reboot: "{{ AD_DC_Create_reboot }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_feature_module.html
+
+    - name: AD Installation
+      ansible.windows.win_feature:
+        name: AD-Domain-Services
+        state: "{{ AD_DC_Create_state_ad }}"
+        include_management_tools: "{{ AD_DC_Create_include_management_tools }}"
+        include_sub_features: "{{ AD_DC_Create_include_sub_features }}"

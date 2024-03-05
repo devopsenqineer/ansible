@@ -1,0 +1,5 @@
+sitename: "Default Site"
+sitesubnet: "127.0.0.1/27"
+sitesincluded: "STxxx"
+sitesincluded2: "Default-First-Site-name"
+sitelinkname: "Default Site"

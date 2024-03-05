@@ -1,0 +1,189 @@
+- name: Create Child OU - "{{ servers_child_ou_name }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+  community.windows.win_domain_ou:
+    name: "{{ servers_child_ou_name }}"
+    path: "{{ computer_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ computer_child_ou_name }}" 
+  community.windows.win_domain_ou:
+    name: "{{ computer_child_ou_name }}"
+    path: "{{ computer_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ standard_clients_child_ou_name }}"
+  community.windows.win_domain_ou:
+    name: "{{ standard_clients_child_ou_name }}"
+    path: "{{ standard_clients_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ application_servers_child_ou_name }}" #
+  community.windows.win_domain_ou:
+    name: "{{ application_servers_child_ou_name }}"
+    path: "{{ server_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ database_servers_ou_child_name }}" 
+  community.windows.win_domain_ou:
+    name: "{{ database_servers_ou_child_name }}"
+    path: "{{ server_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ file_servers_ou_child_name }}"
+  community.windows.win_domain_ou:
+    name: "{{ file_servers_ou_child_name }}"
+    path: "{{ server_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ application_groups_ou_child_name }}" 
+  community.windows.win_domain_ou:
+    name: "{{ application_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ database_groups_ou_child_name }}" 
+  community.windows.win_domain_ou:
+    name: "{{ database_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ filesystem_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ filesystem_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ firewall_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ firewall_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ localpermission_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ localpermission_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ oe_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ oe_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ policy_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ policy_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ role_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ role_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ softwaredistribution_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ softwaredistribution_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ systemright_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ systemright_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ vpn_groups_ou_child_name }}"  
+  community.windows.win_domain_ou:
+    name: "{{ vpn_groups_ou_child_name }}"
+    path: "{{ groups_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ resource_accounts_ou_child_name }}"
+  community.windows.win_domain_ou:
+    name: "{{ resource_accounts_ou_child_name }}"
+    path: "{{ technical_accounts_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ service_accounts_ou_child_name }}"
+  community.windows.win_domain_ou:
+    name: "{{ service_accounts_ou_child_name }}"
+    path: "{{ technical_accounts_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ generic_users_ou_child_name }}"
+  community.windows.win_domain_ou:
+    name: "{{ generic_users_ou_child_name }}"
+    path: "{{ users_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+- name: Create Child OU - "{{ internal_users_ou_child_name }}"
+  community.windows.win_domain_ou:
+    name: "{{ internal_users_ou_child_name }}"
+    path: "{{ users_child_ou_path }}"
+    state: "{{ state }}"
+    protected: "{{ protected }}"

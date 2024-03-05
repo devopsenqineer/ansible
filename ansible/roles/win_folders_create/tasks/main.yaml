@@ -1,0 +1,11 @@
+- name: create durectorys
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_file_module.html
+
+  win_file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "C:\\Production"
+    - "C:\\Production\\Service\\"
+    - "C:\\Production\\Service\\Import"

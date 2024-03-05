@@ -1,0 +1,10 @@
+- name: Create Site
+
+# Doc: Own create_site module
+
+  create_site: 
+    sitename: "{{ MSPS_Site_Create_sitename }}"
+    sitesubnet: "{{ MSPS_Site_Create_sitesubnet }}"
+    firstsite: "{{ MSPS_Site_Create_firstsite }}"
+    secondsite: "{{ MSPS_Site_Create_secondsite }}"
+    sitelinkname: "{{ MSPS_Site_Create_sitelinkname }}"

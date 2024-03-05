@@ -1,0 +1,58 @@
+- name: Create Base OU - "{{ AD_OUBase_Create_mainou }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+  community.windows.win_domain_ou:
+    name: "{{ AD_OUBase_Create_mainou }}"
+    state: "{{ AD_OUBase_create_state }}"
+    protected: "{{ AD_OUBase_create_protected }}"
+
+- name: Create Base OU - "{{ AD_OUBase_Create_Stxx }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+  community.windows.win_domain_ou:
+    name: "{{ AD_OUBase_Create_Stxx }}"
+    path: "{{ AD_OUBase_Create_path_stxxx }}"
+    state: "{{ AD_OUBase_create_state }}"
+    protected: "{{ AD_OUBase_create_protected }}"
+    
+- name: Create Base OU - "{{ AD_OUBase_Create_computers }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+  community.windows.win_domain_ou:
+    name: "{{ AD_OUBase_Create_computers }}"
+    path: "{{ AD_OUBase_Create_path_computers_groups_technical_accounts_users }}"
+    state: "{{ AD_OUBase_create_state }}"
+    protected: "{{ AD_OUBase_create_protected }}"
+
+- name: Create Base OU - "{{ AD_OUBase_Create_groups }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+  community.windows.win_domain_ou:
+    name: "{{ AD_OUBase_Create_groups }}"
+    path: "{{ AD_OUBase_Create_path_computers_groups_technical_accounts_users }}"
+    state: "{{ AD_OUBase_create_state }}"
+    protected: "{{ AD_OUBase_create_protected }}"
+
+- name: Create Base OU - "{{ AD_OUBase_Create_technical_accounts }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+  community.windows.win_domain_ou:
+    name: "{{ AD_OUBase_Create_technical_accounts }}"
+    path: "{{ AD_OUBase_Create_path_computers_groups_technical_accounts_users }}"
+    state: "{{ AD_OUBase_create_state }}"
+    protected: "{{ AD_OUBase_create_protected }}"
+    
+- name: Create Base OU - "{{ AD_OUBase_Create_users }}"
+
+# Doc: https://docs.ansible.com/ansible/latest/collections/community/windows/win_domain_ou_module.html
+
+  community.windows.win_domain_ou:
+    name: "{{ AD_OUBase_Create_users }}"
+    path: "{{ AD_OUBase_Create_path_computers_groups_technical_accounts_users }}"
+    state: "{{  AD_OUBase_create_state }}"
+    protected: "{{ AD_OUBase_create_protected }}"
