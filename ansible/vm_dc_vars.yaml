@@ -1,5 +1,5 @@
 MSPS_VM_DC_Create_vm_name: "WindowsServer2022"
-MSPS_VM_DC_Create_golden_path: "C:\\Users\\Administrator\\Desktop\\\VHDX\\" 
+MSPS_VM_DC_Create_golden_path: "C:\\Users\\Administrator\\Desktop\\VHDX\\" 
 MSPS_VM_DC_Create_vm_path: "C:\\Users\\Administrator\\Desktop\\Test\\"
 MSPS_VM_DC_Create_network_port: "Ethernet0"
 MSPS_VM_DC_Create_user: "Administrator"
